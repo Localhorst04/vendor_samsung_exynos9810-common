@@ -205,7 +205,6 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.radio@2.0 \
     vendor.samsung.hardware.radio@2.1 \
     vendor.samsung.hardware.security.widevine.keyprovisioning@1.0 \
-    libaptX_encoder \
     bcc_mali \
     cbd \
     android.hardware.drm@1.2-service.widevine \
