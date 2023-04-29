@@ -52,8 +52,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/exynos9810-common/proprietary/vendor/etc/plmn_delta_hktw.bin:$(TARGET_COPY_OUT_VENDOR)/etc/plmn_delta_hktw.bin \
     vendor/samsung/exynos9810-common/proprietary/vendor/etc/plmn_delta_usagsm.bin:$(TARGET_COPY_OUT_VENDOR)/etc/plmn_delta_usagsm.bin \
     vendor/samsung/exynos9810-common/proprietary/vendor/etc/plmn_se13.bin:$(TARGET_COPY_OUT_VENDOR)/etc/plmn_se13.bin \
-    vendor/samsung/exynos9810-common/proprietary/vendor/etc/seccomp_policy/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
-    vendor/samsung/exynos9810-common/proprietary/vendor/etc/seccomp_policy/mediaextractor_sec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor_sec.policy \
     vendor/samsung/exynos9810-common/proprietary/vendor/etc/sensor/lhd.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensor/lhd.conf \
     vendor/samsung/exynos9810-common/proprietary/vendor/etc/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
     vendor/samsung/exynos9810-common/proprietary/vendor/etc/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml \
@@ -113,6 +111,7 @@ PRODUCT_PACKAGES += \
     hwcomposer.exynos9810 \
     memtrack.exynos9810 \
     power.exynos9810 \
+    vulkan.mali \
     libExynosHWCService \
     libExynosOMX_Core \
     libExynosOMX_Resourcemanager \
@@ -121,7 +120,6 @@ PRODUCT_PACKAGES += \
     libIDDQD_interface \
     libMcClient \
     libOpenCv.camera.samsung \
-    libRSDriverArm \
     libSEF.quram \
     libacryl \
     libacryl_plugin_slsi_hdr10 \
@@ -142,7 +140,6 @@ PRODUCT_PACKAGES += \
     libhwjpeg \
     libion_exynos \
     libiva_android_hal \
-    libmalicore \
     libqfp_sensortest \
     libsecaudioinfo \
     libsecnativefeature \
@@ -188,11 +185,10 @@ PRODUCT_PACKAGES += \
     gps.default \
     keystore.mdfpp \
     vendor.samsung.hardware.gnss@2.0-impl \
-    libLLVM_android_mali \
-    libbcc_mali \
     libbt-vendor \
     libengmode_client \
     libflicker \
+    libgpudataproducer \
     libkeymaster2_mdfpp \
     libmpp \
     libril-samsung \
@@ -205,7 +201,7 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.radio@2.0 \
     vendor.samsung.hardware.radio@2.1 \
     vendor.samsung.hardware.security.widevine.keyprovisioning@1.0 \
-    bcc_mali \
+    snap_gpu_kernel_64 \
     cbd \
     android.hardware.drm@1.2-service.widevine \
     gpsd \

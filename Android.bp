@@ -195,6 +195,27 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "vulkan.mali",
+	owner: "samsung",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/hw/vulkan.mali.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/hw/vulkan.mali.so"],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	relative_install_path: "hw",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "libExynosHWCService",
 	owner: "samsung",
 	strip: {
@@ -346,26 +367,6 @@ cc_prebuilt_library_shared {
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libOpenCv.camera.samsung.so"],
-		},
-	},
-	compile_multilib: "both",
-	check_elf_files: false,
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libRSDriverArm",
-	owner: "samsung",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libRSDriverArm.so"],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libRSDriverArm.so"],
 		},
 	},
 	compile_multilib: "both",
@@ -766,26 +767,6 @@ cc_prebuilt_library_shared {
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libiva_android_hal.so"],
-		},
-	},
-	compile_multilib: "both",
-	check_elf_files: false,
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libmalicore",
-	owner: "samsung",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libmalicore.bc"],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libmalicore.bc"],
 		},
 	},
 	compile_multilib: "both",
@@ -1651,40 +1632,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libLLVM_android_mali",
-	owner: "samsung",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libLLVM_android_mali.so"],
-		},
-	},
-	compile_multilib: "64",
-	check_elf_files: false,
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libbcc_mali",
-	owner: "samsung",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libbcc_mali.so"],
-		},
-	},
-	compile_multilib: "64",
-	check_elf_files: false,
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "libbt-vendor",
 	owner: "samsung",
 	strip: {
@@ -1727,6 +1674,23 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libflicker.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libgpudataproducer",
+	owner: "samsung",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libgpudataproducer.so"],
 		},
 	},
 	compile_multilib: "64",
@@ -1939,15 +1903,11 @@ cc_prebuilt_library_shared {
 	soc_specific: true,
 }
 
-cc_prebuilt_binary {
-	name: "bcc_mali",
+prebuilt_etc {
+	name: "snap_gpu_kernel_64",
 	owner: "samsung",
-	srcs: ["proprietary/vendor/bin/bcc_mali"],
-	check_elf_files: false,
-	strip: {
-		none: true,
-	},
-	prefer: true,
+	src: "proprietary/vendor/etc/snap_gpu_kernel_64.bin",
+	filename_from_src: true,
 	soc_specific: true,
 }
 
