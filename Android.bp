@@ -1578,6 +1578,27 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "android.hardware.camera.provider@2.4-legacy",
+	owner: "samsung",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/android.hardware.camera.provider@2.4-legacy.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/android.hardware.camera.provider@2.4-legacy.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	relative_install_path: "hw",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "gps.default",
 	owner: "samsung",
 	strip: {

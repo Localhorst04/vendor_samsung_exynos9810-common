@@ -100,8 +100,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/exynos9810-common/proprietary/vendor/openvx/cost/cost_iva.dat:$(TARGET_COPY_OUT_VENDOR)/openvx/cost/cost_iva.dat \
     vendor/samsung/exynos9810-common/proprietary/vendor/openvx/cost/cost_score.dat:$(TARGET_COPY_OUT_VENDOR)/openvx/cost/cost_score.dat \
     vendor/samsung/exynos9810-common/proprietary/vendor/openvx/xml/_hifi_still_schedule.xml:$(TARGET_COPY_OUT_VENDOR)/openvx/xml/_hifi_still_schedule.xml \
-    vendor/samsung/exynos9810-common/proprietary/vendor/lib/android.hardware.camera.provider@2.4-legacy.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.camera.provider@2.4-legacy.so \
-    vendor/samsung/exynos9810-common/proprietary/vendor/lib64/android.hardware.camera.provider@2.4-legacy.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.camera.provider@2.4-legacy.so \
 
 PRODUCT_PACKAGES += \
     camera.device@1.0-impl.exynos9810 \
@@ -211,4 +209,5 @@ PRODUCT_PACKAGES += \
     rild \
     vendor.samsung.hardware.gnss@2.0-service \
     mcDriverDaemon \
-    vendor.samsung.hardware.security.widevine.keyprovisioning@1.0-service
+    vendor.samsung.hardware.security.widevine.keyprovisioning@1.0-service \
+    android.hardware.camera.provider@2.4-legacy
