@@ -829,6 +829,7 @@ cc_prebuilt_library_shared {
 			srcs: ["proprietary/vendor/lib64/libsecnativefeature.so"],
 		},
 	},
+	shared_libs: ["libexpat"],
 	compile_multilib: "both",
 	check_elf_files: false,
 	prefer: true,
