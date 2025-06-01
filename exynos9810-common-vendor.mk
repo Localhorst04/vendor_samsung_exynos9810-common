@@ -198,8 +198,6 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.gnss@2.0 \
     vendor.samsung.hardware.radio.bridge@2.0 \
     vendor.samsung.hardware.radio.channel@2.0 \
-    vendor.samsung.hardware.radio@2.0 \
-    vendor.samsung.hardware.radio@2.1 \
     vendor.samsung.hardware.security.widevine.keyprovisioning@1.0 \
     snap_gpu_kernel_64 \
     cbd \
